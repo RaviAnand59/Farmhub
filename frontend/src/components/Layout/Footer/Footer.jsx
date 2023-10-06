@@ -30,13 +30,13 @@ const StyledBox = styled(Box)({
   }
 });
 
-const SocialLink = styled(Link)({
+const SocialLink = styled(Link)(({ theme }) => ({
   '&:hover': {
     '& .MuiSvgIcon-root': {
-      color: 'your-hover-color', // Change to your desired hover color
+      color: theme.palette.secondary.main
     },
   },
-});
+}));
 
 export default function BasicGrid() {
   return (
